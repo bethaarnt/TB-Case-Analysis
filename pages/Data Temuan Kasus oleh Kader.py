@@ -55,7 +55,7 @@ def geographical_analysis(data):
 
 def treatment_outcomes(data):
     outcome_counts = data['Hasil Pengobatan'].value_counts()
-    fig = px.pie(values=outcome_counts.values, names=outcome_counts.index, title='Hasil Pengobatan')
+    fig = px.pie(values=outcome_counts.values, names=outcome_counts.index, labels={'values': 'Jumlah Kasus', 'names': 'Hasil Pengobatan'}, title='Hasil Pengobatan')
     st.plotly_chart(fig)
 
 def main():
